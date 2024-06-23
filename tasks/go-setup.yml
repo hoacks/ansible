@@ -14,7 +14,7 @@
 - name: Add GOPATH 
   lineinfile:
     path: ~/.zshrc 
-    line: 'export GOPATH=/usr/bin'
+    line: 'export GOPATH=/usr/bin/go'
     create: true 
     state: present 
 - name: Source updated profile and test go version 
