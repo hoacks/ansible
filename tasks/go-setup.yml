@@ -23,6 +23,12 @@
     line: 'export GOROOT=$HOME/go'
     create: true 
     state: present 
+- name: Add GOPROXY
+  lineinfile:
+    path: ~/.zshrc 
+    line: 'export GOPROXY=https://proxy.golang.org'
+    create: true 
+    state: present 
 - name: Source updated profile and test go version 
   shell: . ~/.profile && go version 
 
