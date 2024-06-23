@@ -1,7 +1,6 @@
 - name: Install Go packages
-  become: true 
-  command: go install "{{ item }}"
-  loop:
+  command: go install -v "{{ item }}"
+  with_items:
     - github.com/tomnomnom/anew@latest
     - github.com/tomnomnom/unfurl@latest
     - github.com/tomnomnom/gf@latest
