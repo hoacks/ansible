@@ -12,7 +12,7 @@
     create: true
     state: present 
 - name: Add GOPATH 
-  lineinline:
+  lineinfile:
     path: ~/.zshrc 
     line: 'export GOPATH=/usr/bin'
     create: true 
