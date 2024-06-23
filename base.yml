@@ -1,0 +1,19 @@
+- hosts: localhost
+  become: true
+  vars:
+    - version: 1.22.3
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+      tags:
+      - gotools
+      - massdns
+      - zsh
+  tasks:
+    #- include: ./core.yml
+    - include: ./go-setup.yml
+    - include: ./zsh.yml
+    - include: ./gotools.yml
+    - include: ./tools.yml
+ 
