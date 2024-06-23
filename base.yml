@@ -12,7 +12,7 @@
       - zsh
   tasks:
     #- include: ./core.yml
-    - include: ./go-setup.yml
-    - include: ./gotools.yml
-    - include: ./tools.yml
+    - include_tasks: ./go-setup.yml
+    - include_tasks: ./gotools.yml
+    - include_tasks: ./tools.yml
  
