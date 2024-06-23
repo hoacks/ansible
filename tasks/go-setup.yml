@@ -4,7 +4,7 @@
   command: tar -C /usr/bin -xzf go1.22.3.linux-amd64.tar.gz 
   become: true 
 - name: Delete downlaod tar file 
-  shell: rm -rf go{{version}}.linux-amd64.tar.gz* 
+  shell: rm -rf go1.22.3.linux-amd64.tar.gz* 
 - name: Add go binary path to ~/.profile    
   lineinfile:
     path: ~/.zshrc 
