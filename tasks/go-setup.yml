@@ -29,6 +29,12 @@
     line: 'export GOPROXY=https://proxy.golang.org'
     create: true 
     state: present 
+- name: Add GOSUMDB
+  lineinfile:
+    path: ~/.zshrc 
+    line: 'export GOSUMDB=sum.golang.org'
+    create: true
+    state: present 
 - name: Source updated profile and test go version 
   shell: . ~/.profile && go version 
 
