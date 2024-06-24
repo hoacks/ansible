@@ -8,19 +8,13 @@
 - name: Add go binary path to ~/.profile    
   lineinfile:
     path: ~/.zshrc 
-    line: 'export PATH=$PATH:/usr/bin:$GOPATH/bin'
+    line: 'export PATH=$PATH:/usr/bin/go/bin:$GOPATH/bin'
     create: true
     state: present 
 - name: Add GOPATH 
   lineinfile:
     path: ~/.zshrc 
-    line: 'export GOPATH=/usr/bin/go'
-    create: true 
-    state: present 
-- name: Add GOROOT
-  lineinfile:
-    path: ~/.zshrc 
-    line: 'export GOROOT=$HOME/go'
+    line: 'export GOPATH=$HOME/go'
     create: true 
     state: present 
 - name: Add GOPROXY
@@ -37,5 +31,4 @@
     state: present 
 - name: Source updated profile and test go version 
   shell: . ~/.profile && go version 
-
 
