@@ -1,5 +1,5 @@
 - name: Install Go packages
-  command: go install -v "{{ item }}"
+  command: go install "{{ item }}"
   with_items:
     - github.com/tomnomnom/anew@latest
     - github.com/tomnomnom/unfurl@latest
