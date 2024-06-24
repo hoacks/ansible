@@ -1,7 +1,7 @@
 - name: Install System Packages 1 (build-essential, cmake, pkg-config, pthread)
   become: true
   apt:
-    name: ["build-essential", "pkg-config", "golang"]
+    name: ["build-essential", "pkg-config", "golang-go"]
   tags:
     - install
     - neovim
@@ -19,7 +19,7 @@
 - name: Install System Packages 3 (the rest)
   become: true
   apt:
-    name: [ "curl", "htop", "golang", "lsof", "python3-pip", "moreutils" ]
+    name: [ "curl", "htop", "lsof", "python3-pip", "moreutils" ]
   tags:
     - install
     - core
