@@ -30,5 +30,5 @@
     create: true
     state: present 
 - name: Source updated profile and test go version 
-  shell: . ~/.profile && go version 
+  shell: . ~/.zshrc && go version 
 
