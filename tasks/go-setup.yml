@@ -32,5 +32,3 @@
 - name: Source updated profile and test go version 
   shell: . ~/.zshrc && go version 
   
- R
-
