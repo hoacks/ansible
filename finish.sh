@@ -24,4 +24,4 @@ if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bas
 
 apt install nfs-common
 
-
+pip install bbrf
